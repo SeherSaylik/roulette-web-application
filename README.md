@@ -1,11 +1,12 @@
 **RUN THIS PROJECT**
 
-CLI 
+--CLI --
 
 $ npm install
 
 $ live-server
 
+--Notes--
 
 In order to select with id : use "#"
 
