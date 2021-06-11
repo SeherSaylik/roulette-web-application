@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<style>
+body {
+  background-color:#72a389;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+  text-align: center;
+  text-transform: uppercase;
+  color: #061b07;
+  border: 3px solid rgb(6, 80, 24);
+}
+</style>
+</head>
+<body>
+<img src="/src/images/giphy.gif" alt="This will display an animated GIF" />
+<p class="display-winner"></p>
+<p class="display-result"></p>
+<script>
+  var url = new URL(window.location.href);
+  var result = url.searchParams.get("result");
+  var status= url.searchParams.get("status");
+  var amount=url.searchParams.get("amount");
+  document.querySelector('.display-winner').textContent="Winner Number: "+ result;
+  document.querySelector('.display-result').textContent="You "+status+" "+amount+"!";
+</script>
+</body>
+</html>

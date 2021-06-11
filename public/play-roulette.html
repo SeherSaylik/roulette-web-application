@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 
-
 <link rel="stylesheet" href="style.css">
 <script src="index.html"></script>
+<script src="result.html"></script>
+
 
 <title>Play Roulette</title>
 <meta charset="utf-8">
@@ -60,21 +61,9 @@ body {
   cursor: pointer;
 }
 
-.odd-even-button{
-  background-color: #4CAF50; /* Green */
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-
-}
-.bet-button {
+.bet-button  {
   background-color: #223185; /* Green */
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -83,15 +72,19 @@ body {
   margin: 4px 2px;
 
 }
-.bet-price-button {
-  background-color: #223185; /* Green */
+
+#bet-price-button {
+  background-color: #053d28; /* Green */
   color: white;
-  padding: 15px 32px;
+  padding: 15px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 3px;
-  margin: 4px 2px;font-size: 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  width: 100px;
+  height: 50px;
+
 }
 
 </style>
@@ -110,33 +103,34 @@ body {
   </div>
 
 <p>Make a bid and wait for the result!</p>
-<p>If you bet for only one number you will get x12</p>
-<p>If you bet for "odd" or "even" you will get x2</p>    
+<p>If you guess the number you will get x12</p>
 
 
-<button class="number-button" >0</button>
-<button class="number-button" >1</button>
-<button class="number-button">2</button>
-<button class="number-button">3</button>
-<button class="number-button">4</button>
-<button class="number-button">5</button>
-<button class="number-button">6</button>
-<button class="number-button">7</button>
-<button class="number-button">8</button>
-<button class="number-button">9</button>
-<button class="number-button">11</button>
-<button class="number-button">12</button>
-
+<button class="number-button" id="0" >0</button>
+<button class="number-button" id="1" >1</button>
+<button class="number-button" id="2" >2</button>
+<button class="number-button" id="3" >3</button>
+<button class="number-button" id="4" >4</button>
+<button class="number-button" id="5" >5</button>
+<button class="number-button" id="6" >6</button>
+<button class="number-button" id="7" >7</button>
+<button class="number-button" id="8" >8</button>
+<button class="number-button" id="9" >9</button>
+<button class="number-button" id="10 ">10</button>
+<button class="number-button" id="11 ">11</button>
+<button class="number-button" id="12" >12</button>
 <a>Bet Price  </a> 
-<input type="text" id="bet-price-button">
+<input type="text" id="bet-price-button" disabled>
 
-<br>
-<button class="odd-even-button">Odd</button>
-<button class="odd-even-button">Even</button>
 <br>
 <button class="bet-button">BET</button>
 
-<script src="index.js"></script>
+<div id="spin" style="display:none">
+  <img src="giphy.gif" alt="This will display an animated GIF" />
+  <p class="display-result"></p>
+</div>
+
+<script src="/src/index.js"></script>
 
 </body>
 </html>
