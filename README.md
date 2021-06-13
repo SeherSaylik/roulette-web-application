@@ -6,8 +6,3 @@ $ npm install
 
 $ live-server
 
---Notes--
-
-In order to select with id : use "#"
-
-In order to select with class: use "."
